@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Post from './Post';
+import Typography from '@material-ui/core/Typography';
 
 
 const Home = () => {
@@ -17,7 +18,7 @@ const Home = () => {
 
     return (
         <div>
-            <h1>All Posts</h1>
+            <Typography variant="h3" color="textSecondary">All Posts</Typography>
             {
                 posts.map(pt => <Post post={pt} key={pt.id}></Post>)
             }

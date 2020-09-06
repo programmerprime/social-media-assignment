@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Avatar } from '@material-ui/core';
 
 const Comments = (props) => {
     
@@ -29,7 +30,7 @@ const Comments = (props) => {
 
     return (
         <div style={commentStyle}>
-            <img style={{borderRadius:'40px', display:'block', float:'left'}} src={imageURL} alt="avatar"/>
+            <Avatar src={imageURL}></Avatar>
             <h4>Commented by: {email}</h4>
             <h3 style={{color: 'mediumseagreen'}}>{name}</h3>
             <p style={{textAlign: 'justify'}}>{body}</p>

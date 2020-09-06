@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button} from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import Container from '@material-ui/core/Container';
 
 const Post = (props) => {
 
@@ -19,12 +20,12 @@ const Post = (props) => {
     }
 
     return (
-        <div style={postStyle}>
+        <Container maxWidth="md" style={postStyle}>
             <p><small>Post Number: {id}</small></p>
             <h3 style={{color: 'purple'}}>{title}</h3>
             <p style={{textAlign: 'justify', background: 'lightblue', padding: '20px', borderRadius: '20px'}}>{body}</p>
             <Button color="primary" variant="contained"><Link style={{color: 'white', textDecoration: 'none'}} to={`/${id}`}>Read More</Link></Button>
-        </div>
+            </Container>
     );
 };
 
